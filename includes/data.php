@@ -9,7 +9,7 @@ function calculate_order_total(array $order, array $products): float
     $subtotal = 0;
 
     foreach ($order['items'] as $item) {
-        $subtotal += $products[$item['sku']]['price'] * $items['qty'];
+        $subtotal += $products[$item['sku']]['price'] * $item['qty'];
     }
 
     return $subtotal;
