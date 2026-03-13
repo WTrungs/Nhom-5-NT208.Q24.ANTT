@@ -4,7 +4,7 @@ $config = [
     'currency' => 'USD',
     'timezone' => 'Asia/Ho_Chi_Minh',
     'language' => 'en',
-;
+];
 ?>
 
 <section class="card">

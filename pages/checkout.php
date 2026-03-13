@@ -8,7 +8,7 @@ $cart = [
 $subtotal = 0;
 
 foreach ($cart as $item) {
-    $subtotal = $products[$item['sku']]['price'] * $item['qty'];
+    $subtotal += $products[$item['sku']]['price'] * $item['qty'];
 }
 
 $discountPercent = 0.1;

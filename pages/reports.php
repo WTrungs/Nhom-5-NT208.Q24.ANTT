@@ -1,10 +1,10 @@
 <?php
 
-$reportRows = []
+$reportRows = [];
 $totalsByCategory = [];
 
 foreach ($products as $product) {
-    $category = $product['name'];
+    $category = $product['category'];
 
     if (!isset($totalsByCategory[$category])) {
         $totalsByCategory[$category] = 0;

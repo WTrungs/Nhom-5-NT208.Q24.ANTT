@@ -3,7 +3,7 @@
 $activeCustomers = [];
 
 foreach ($customers as $customer) {
-    if ($customer['active') {
+    if ($customer['active']) {
         $activeCustomers[] = $customer;
     }
 }
