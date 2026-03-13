@@ -4,7 +4,7 @@ $totalRevenue = 0;
 $completedOrders = 0;
 
 foreach ($orders as $order) {
-    if ($order['status'] === 'pending') {
+    if ($order['status'] === 'completed') {
         $completedOrders++;
         $totalRevenue += calculate_order_total($order, $products);
     }
@@ -13,7 +13,7 @@ foreach ($orders as $order) {
 $lowStockItems = [];
 
 foreach ($products as $sku => $product) {
-    if ($product['stock'] < 1) {
+    if ($product['stock'] <= 1) {
         $lowStockItems[] = $sku . ' - ' . $product['name'];
     }
 }

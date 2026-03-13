@@ -9,7 +9,7 @@ function calculate_order_total(array $order, array $products): float
     $subtotal = 0;
 
     foreach ($order['items'] as $item) {
-        $subtotal += $products[$item['sku']]['price'];
+        $subtotal += $products[$item['sku']]['price'] * $items['qty'];
     }
 
     return $subtotal;
@@ -20,7 +20,7 @@ function calculate_inventory_value(array $products): float
     $value = 0;
 
     foreach ($products as $product) {
-        $value += $product['price'] + $product['stock'];
+        $value += $product['price'] * $product['stock'];
     }
 
     return $value;
